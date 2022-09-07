@@ -1,0 +1,143 @@
+* {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.header {
+	padding-top: 30px;
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		height: 50px;
+	}
+	&__sort {
+		display: flex;
+		align-items: flex-start;
+		&-title {
+			margin-right: 15px;
+			color: #A9A9A9;
+			margin-top: 6px;
+		}
+	#category {
+		padding: 7px;
+		border-radius: 3px;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		border: none;
+	}
+	
+	}
+	&__nav {	
+		display: flex;
+		align-items: flex-end;
+		&-title {
+			margin-right: 35px;
+			color: #A9A9A9;
+		}
+		&-nav {
+			a {
+				position: relative;
+				text-decoration: none;
+				color: #A9A9A9;
+				margin-right: 10px;
+				
+				&::before {
+					content: "";
+					position: absolute;
+					width: 0;
+					height: 4px;
+					left: 0;
+					bottom: -10px;
+					background-color: orange;
+					transition: 0.3s ease;
+				}
+				&:hover {
+					color: black;
+					transition: 0.3s ease;
+				}
+				&:hover::before {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&__divider {
+		width: 99%;
+		height: 1px;
+		background-color:#E5E4E2;
+		margin-top: 8px;
+	}
+}
+
+.product {
+	padding-top: 30px;
+	&__wrapper {
+		display: flex;
+	}
+	&__item {
+		position: relative;
+		width: 300px;
+		height: 490px;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+		border-radius: 5px;
+		padding: 15px 30px;
+		margin-right: 10px;
+	}
+	&__img {
+		img {
+			max-width: 200px;
+			height: 300px;
+			object-fit: contain;
+			margin: 0 auto;
+			display: block;
+		}
+		
+	}
+	&__sale {
+		position: absolute;
+		text-align: center;
+		font-size: 22px;
+		background-color: red;
+		padding: 5px 20px;
+		color: #fff;
+		border-radius: 5px;
+		font-weight: 700;
+		top: 60px;
+		right: 30px;
+	}
+	&__author {
+		font-size: 20px;
+		font-weight: 500;
+		margin-top: 20px;
+	}
+	&__title {
+		font-size: 16px;
+	}
+	&__rating {
+		margin-top: 20px;
+		span {
+			color: #DBA800;
+		}
+	}
+	&__price {
+		display: flex;
+		margin-top: 15px;
+		&-new {
+			font-weight: 800;
+			font-size: 20px;
+			color: #DBA800;
+			margin-right: 20px;
+		}
+		&-old {
+			color:gray;
+			font-size: 18px;
+			text-decoration: line-through;
+		}
+	}
+}
